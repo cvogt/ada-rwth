@@ -12,21 +12,9 @@ package body mydemo is
 prOCEDURE Demo (Looping:Integer:=1) IS
    Bla     : Character;
    LocalLooping : Integer   := 0;
-   --TYPE Farbe IS (Rot, Gelb, Gruen, Blau);
-   --type Farbenmischung is array (Farbe range <>) of float;
-   --type Tag is (Mo, Di, Mi, Dn, Fr, Sa, So);
-   TYPE MyArr IS ARRAY(0..Looping) OF Character;
-  -- type unbegrenzteZeile is array (natural range <>) of character;
-   MyArrObj :MyArr;
-  -- Orange: CONSTANT Farbenmischung := (0.5,0.5);
-   n: positive;
-   --myString: constant unbegrenzteZeile := "Demonstration";
-  -- MeineZeile: CONSTANT UnbegrenzteZeile:=myString;
 
 BEGIN
-   n:=-1;
-   Put(n);
-  -- Put(myString'First);
+
    Get(Bla);
 
 
@@ -41,16 +29,13 @@ BEGIN
          Put_Line("others");
 
    END CASE;
-      MyArrObj := (others =>'0');
-      MyArrObj((Looping/2)) := Bla;
+
    New_Line;
 
    MyLoop:
       WHILE LocalLooping < Looping LOOP
       Put(LocalLooping);
-      Put(' ');
-      Put(MyArrObj(LocalLooping));
-      New_Line;
+
       LocalLooping:=LocalLooping+1;
    END LOOP MyLoop;
    New_Line;
