@@ -16,6 +16,7 @@ PROCEDURE Generics IS
  function h2 is new Hoch_zwei(Integer);
 
 BEGIN
-      put(H2(2));
+   Put(H2(2));
+   put(Hoch_Zwei(Integer)(2)); --geht nicht
     null;
 end generics;
