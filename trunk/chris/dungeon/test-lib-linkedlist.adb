@@ -1,4 +1,4 @@
-with lib; use lib.unittest;
+with lib.linkedlist; use lib.unittest;
 procedure test is
 	package list is new lib.linkedlist( INTEGER );
 	use list;
