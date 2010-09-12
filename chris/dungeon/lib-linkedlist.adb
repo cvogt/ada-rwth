@@ -1,5 +1,4 @@
-separate(lib)
-package body LinkedList is
+package body lib.LinkedList is
 	type TElement;
 	type PElement is access TElement;
 	type TElement is record
@@ -37,4 +36,4 @@ package body LinkedList is
 	function length return INTEGER is begin
 		return len;
 	end;
-end LinkedList;
+end;
