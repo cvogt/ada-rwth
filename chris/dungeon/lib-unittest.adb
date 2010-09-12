@@ -1,12 +1,13 @@
 with Ada.Text_IO; use Ada.Text_IO;
-separate(lib)
-package body unittest is
+package body lib.unittest is
 	procedure fail( s:STRING := "" ) is begin
-		new_line;
-		put("FAILED");
-		if s /= "" then
-			put(": ");
-			put(s);
+		if not suppress_messages then
+			new_line;
+			put("FAILED");
+			if s /= "" then
+				put(": ");
+				put(s);
+			end if;
 		end if;
 		raise Failed;
 	end;
