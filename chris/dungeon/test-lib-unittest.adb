@@ -1,8 +1,9 @@
-with lib; use lib.unittest;
+with lib.unittest; use lib.unittest;
 procedure test is
 	Broken : exception;
 begin
 	assert( True );
+	suppress_messages := True;
 	begin
 		fail;
 		raise Broken;
