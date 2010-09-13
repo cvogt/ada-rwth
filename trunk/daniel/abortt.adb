@@ -5,8 +5,11 @@ PROCEDURE abortt IS
 I:Integer;
    BEGIN
       SELECT
-         DELAY 5.0;
+         DELAY 15.0;
          I:=5;
+                 LOOP
+               null;
+            end loop;
       THEN ABORT
          LOOP
                null;
