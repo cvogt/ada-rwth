@@ -7,9 +7,10 @@ I:Integer;
       SELECT
          DELAY 5.0;
          I:=5;
-
       THEN ABORT
-         Get(I);
+         LOOP
+               null;
+            end loop;
       END SELECT;
       Put (I);
     null;
