@@ -3,7 +3,7 @@ USE Ada.Integer_Text_IO;
 
 PROCEDURE Main IS
 
-   BEGIN
+BEGIN
 
-    null;
-end main;
+   NULL;
+END Main;
